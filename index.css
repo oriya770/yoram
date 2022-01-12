@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+body {font-family: 'Roboto', sans-serif;}
+div { box-sizing: border-box; }
+h1 {font-family: 'Rubik', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-size: 2.5rem;
+}
+.searchInpu, .left, .right, .center, .card, .footer{ border: 1px solid rgba(0, 0, 0, .8);}
+
+.header{
+    padding-bottom: 80px;
+}
+
+.nav {
+    display: flex;
+    background-color: #6d0101;
+    flex-wrap: wrap;
+    line-height: 80px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+    padding: 0 20px;
+}
+
+.navLink{
+    flex: 5%;
+    text-align: center;
+}
+
+.navSpace{
+    flex: 75%;
+}
+
+.navSearch{
+    flex: 10%;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.searchInput {
+    border-radius: 4px;
+    line-height: 24px;
+    width: 100%;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    padding:  0 40px 40px;
+    /* background-image: linear-gradient(#6d0101, white); */
+}
+
+.left  {
+    flex: 18%;
+    background-image: linear-gradient(#d9dadc, #6d0101,#d9dadc);
+}
+.right {
+    flex: 18%;
+    background-image: linear-gradient(#d9dadc, #d9dadc);
+}
+
+.center{
+    flex: 60%;
+    background-image: url(pic/cake1.jpg);
+    background-position:center center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left, .right, .center {border-radius: 10px;}
+
+.canterHead {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+/* centerBody */
+.centerBody{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 0 135px;
+}
+
+.card{
+    flex: 15%;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: white;
+}
+.card:hover{
+    transform: scale(1.05, 1.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0.5);
+}
+.card:hover span{
+    display: block;
+    transform: scale(2,2);
+}
+
+.cardHead{
+    padding-bottom: 60px;
+}
+
+.cardBody {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    /* background-color: gray; */
+    background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png);
+    background-position:center center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
+}
+
+.circle:hover{
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0 .6);
+}
+
+.centerFooter{
+    padding: 100px 135px 40px;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.textColum {
+    flex: 15%;
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+.search{
+    position: relative;
+}
+.search::before{
+    content: " ";
+    background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png);
+    background-position:center center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:30%;
+    width: 25px;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+}
+.nav1200 {display: none }
+.hide {display: none !important;}
+
+
+
+/* up to 1200px screen width */
+
+@media only screen and (max-width: 1200px){
+    .nav1200 {
+        position: relative;
+        display: block;
+        height: 100px;
+        background-color: #6d0101;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .nav {display: none;}
+    .btnimg{width: 60px; height: 60px;}
+    .dropMenu{
+        position: relative;
+        border: 1px solid #6d0101;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        width: 25%;
+        gap: 20px;
+        padding: 20px;
+        top: 20px;
+    }
+    .link {
+        color: #6d0101;
+    }
+    .navSearch{
+        position: absolute;
+        right: 20px;
+        display: inline-block;
+    }
+    .searchInput{
+        border-radius: 4px;
+        line-height: 60px;
+        width: 300px;
+        font-size: 1.8rem;
+        padding-left: 70px;
+    }
+    .search::before{
+        content: " ";
+        background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png);
+        background-position:center center ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 90%;
+        width: 60px;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+    }
+
+    .left, .right {display: none}
+}
